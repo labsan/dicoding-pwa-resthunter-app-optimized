@@ -12,5 +12,20 @@
         "sourceType": "module"
     },
     "rules": {
+        "linebreak-style": 0,
+        "require-jsdoc": ["error", {
+            "require": {
+                "FunctionDeclaration": true,
+                "MethodDefinition": false,
+                "ClassDeclaration": false,
+                "ArrowFunctionExpression": false,
+                "FunctionExpression": false
+            }
+        }],
+        "max-len": ["error", {
+            "code": 100,
+            "tabWidth": 3
+        }],
+        "new-cap": ["error", { "capIsNew": false }]
     }
 }
