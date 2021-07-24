@@ -3,7 +3,7 @@ const CONFIG = {
   BASE_URL: 'https://restaurant-api.dicoding.dev/',
   BASE_IMAGE_URL: 'https://restaurant-api.dicoding.dev/images/large/',
   DEFAULT_LANGUAGE: 'en-us',
-  CACHE_NAME: new Date().toISOString(), // RestHunter-V3
+  CACHE_NAME: 'RestHunter-V3', // new Date().toISOString()
   DATABASE_NAME: 'DB-RestHunter-V3',
   DATABASE_VERSION: 3,
   OBJECT_STORE_NAME: 'ObjS-RestHunter-V3',
