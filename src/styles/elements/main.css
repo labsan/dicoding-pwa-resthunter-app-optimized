@@ -1,0 +1,116 @@
+/*
+ * Main Section
+ */
+
+ main {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .container {
+    margin: 2em 10%;
+    padding: 1em;
+  }
+  
+  .main-content__title {
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: var(--secondary-color);
+  }
+  
+  #explore-restaurant {
+    display: grid;
+    grid-row-gap: 2em;
+    padding-top: 1.5em;
+  }
+  
+  /*
+   * Cards
+   */
+  
+  .card {
+    width: 100%;
+    background-color: var(--tertiary-color);
+    box-shadow: 0 10px 20px 0 rgba(121, 135, 119, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: translate3D(0, -5px, 0);
+    transition: all 1s;
+    box-shadow: 10px 10px 5px 0 var(--secondary-color);
+  }
+  
+  .card-a-tag {
+    text-decoration: none;
+  }
+  
+  .card-rating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: large;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    padding: 0.4em 1.3em;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1;
+  }
+  
+  .card-rating .fa {
+    font-size: smaller;
+    padding: 0.3em 0.8em 0.3em 0;
+    color: yellow;
+  }
+  
+  .img-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    max-height: 600px;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-content {
+    padding: 0 1em 1.4em 1em;
+    font-size: small;
+    text-align: center;
+  }
+  
+  .card-content-title {
+    padding: 0.5em 0;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  .card-content-title:hover {
+    cursor: pointer;
+    text-decoration: wavy underline;
+  }
+  
+  .card-content-city {
+    font-weight: bold;
+    padding-bottom: 0.376em;
+    color: var(--primary-color);
+  }
+
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    color: var(--primary-color);
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  

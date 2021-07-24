@@ -1,0 +1,102 @@
+/*
+ *  root settings
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+:root {
+  --primary-color: #F8EDE3;
+  --secondary-color: #5D5E55;
+  --tertiary-color: #a4b49c;
+  --image-color: linear-gradient(
+    1deg,
+    rgb(255 207 126 / 40%) 3%,
+    rgb(0 0 0 / 40%) 30%
+  );
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  /* 
+    This element not support by 
+    Safari < 14, iOS Safari < 14
+  */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: 'Alata', sans-serif;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+/* 
+  Touch Target Dimension 
+*/
+
+.link-footer {
+  display: inline-block;
+  padding: 0.7rem 0;
+  font-family: 'Alata', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+.link-footer:hover {
+  cursor: pointer;
+  text-decoration: wavy underline var(--tertiary-color);
+}
+
+/* Skip link */
+
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  padding: 0.95em 0.9em;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* 
+  Button 
+*/
+
+.btn-hero {
+  padding: 0.75em 0.9em;
+  margin: 2em;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 3px solid var(--primary-color);
+  border-radius: 5em;
+  font-size: large;
+  text-decoration: none;
+}
+
+.btn-hero:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: ease 1s;
+}
+

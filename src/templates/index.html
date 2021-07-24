@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free movie catalogue for you">
-    <link rel="icon" href="favicon.ico">
-    <title>Movie Catalogue</title>
-</head>
-<body>
-<h1>Movie Catalogue</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" 
+            content="Web aplikasi tentang informasi restoran terbaik di Indonesia">
+
+        <!-- Import Manifest -->
+        <link rel="manifest" 
+            href="manifest.5076403d3b1e5c77e0b5e5bd051a8b98.json" 
+            crossorigin="use-credentials">
+
+        <!-- Icon for Apple -->
+        <link rel="apple-touch-icon" href="icons/apple-touch-icon-180x180.png">
+        
+        <!-- Icon for Microsoft -->
+        <meta name="msapplication-TileColor" content="#f8ede3">
+        <meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
+
+        <!-- Icon for Safari Browser -->
+        <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#f8ede3">
+
+        <!-- Import FontAwesome Icon -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
+        crossorigin="anonymous"
+        />
+
+        <!-- Import CDN Favorite Icon -->
+        <script
+        src="https://use.fontawesome.com/b070c8f1df.js"
+        crossorigin="anonymous">
+        </script>
+
+        <!-- Web Title -->
+        <title>RestHunter | Berburu informasi restoran terbaik di Indonesia</title>
+    </head>
+
+    <body>
+        <!-- Skip Link -->
+        <a href="#main-content" class="skip-link">Menuju Konten</a>
+
+        <!-- Header Section -->
+        <header class="hero">
+            <nav-bar></nav-bar>
+            <hero-content class="hero__text"></hero-content>
+        </header>
+
+        <!-- Content Section -->
+        <main id="main-content"></main>
+
+        <!-- Footer Section -->
+        <custom-footer></custom-footer>
+    </body>
 </html>

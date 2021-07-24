@@ -1,0 +1,29 @@
+{
+    "connector": {
+        "name": "resthunter-connect"
+    },
+    "formatters": ["resthunter-format"],
+    "hints": {
+        "content-type": ["error", {
+            ".*\\.js": "application/javascript; charset=utf-8"
+        }],
+        "compat-api/html": ["error", {
+            "ignore": ["blink"],
+            "enable": ["integrity"]
+        }],
+        "manifest-file-extension": "error"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "a[rel=noopener]",
+        "autocomplete",
+        "crossorigin",
+        "input[inputmode]",
+        "integrity",
+        "link[rel]",
+        "main",
+        "spellcheck"
+    ],
+    "parsers": ["resthunter-parse"]
+}
