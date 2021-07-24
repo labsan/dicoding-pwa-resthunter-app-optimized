@@ -6,7 +6,7 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "lint": "eslint ./src/scripts",
+    "lint": "eslint ./src",
     "test": "karma start"
   },
   "keywords": [],
@@ -24,7 +24,6 @@
     "favicons": "^6.2.2",
     "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.2.0",
-    "hint": "^6.1.4",
     "html-webpack-plugin": "^4.5.2",
     "style-loader": "^2.0.0",
     "webpack": "^4.46.0",
