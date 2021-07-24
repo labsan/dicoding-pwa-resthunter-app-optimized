@@ -32,13 +32,13 @@ const APP = new App({
   content: document.querySelector('#main-content'),
 });
 
-// window.addEventListener('hashchange', () => {
-//   document.querySelector('.container').scrollIntoView();
-//   APP.renderPage();
-// });
+window.addEventListener('hashchange', () => {
+  document.querySelector('.container').scrollIntoView();
+  APP.renderPage();
+});
 
-// window.addEventListener('load', () => {
-//   APP.renderPage();
-//   SW_REGISTER();
-//   WEBSOCKET_INITIATOR.init(CONFIG.WEBSOCKET_SERVER);
-// });
+window.addEventListener('load', () => {
+  APP.renderPage();
+  SW_REGISTER();
+  WEBSOCKET_INITIATOR.init(CONFIG.WEBSOCKET_SERVER);
+});

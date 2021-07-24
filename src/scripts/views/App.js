@@ -1,6 +1,6 @@
 import DRAWER_INITIATOR from '../utils/drawer-initiator';
-// import URL_PARSER from '../routes/url-parser';
-// import ROUTES from '../routes/routes';
+import URL_PARSER from '../routes/url-parser';
+import ROUTES from '../routes/routes';
 
 class App {
   constructor({button, drawer, content}) {
@@ -19,12 +19,12 @@ class App {
     });
   }
 
-//   async renderPage() {
-//     const url = URL_PARSER.parseActiveUrlWithCombiner();
-//     const page = ROUTES[url];
-//     this._content.innerHTML = await page.render();
-//     await page.afterRender();
-//   }
+  async renderPage() {
+    const url = URL_PARSER.parseActiveUrlWithCombiner();
+    const page = ROUTES[url];
+    this._content.innerHTML = await page.render();
+    await page.afterRender();
+  }
 }
 
 export default App;
