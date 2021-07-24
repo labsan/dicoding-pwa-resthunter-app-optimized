@@ -1,3 +1,4 @@
+/* for async await transpile */
 import 'regenerator-runtime';
 
 /* import CSS */
@@ -20,7 +21,7 @@ import './components/hero';
 import './components/footer';
 
 /* import JS */
-import App from './views/App';
+import App from './views/app';
 import SW_REGISTER from './utils/sw-register';
 import WEBSOCKET_INITIATOR from './utils/websocket-initiator';
 import CONFIG from './globals/config';

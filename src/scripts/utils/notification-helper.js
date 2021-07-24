@@ -1,19 +1,19 @@
 const NOTIFICATION_HELPER = {
   sendNotification({title, options}) {
-    // TODO: periksa ketersediaan notifikasi
+    // TODO: check availability
     if (!this._checkAvailability()) {
-      console.log('Notifikasi tidak mendukung pada browser ini');
+      console.log('Notification not supported in this browser');
       return;
     }
 
-    // TODO: periksa izin notifikasi
+    // TODO: check permissions. if not granted, send request
     if (!this._checkPermission()) {
-      console.log('Pengguna belum memberikan izin notifikasi');
+      console.log('User did not yet granted permission');
       this._requestPermission();
       return;
     }
 
-    // TODO: menampilkan notifikasi
+    // TODO: show notification
     this._showNotification({title, options});
   },
 
