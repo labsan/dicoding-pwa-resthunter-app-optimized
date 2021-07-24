@@ -21,9 +21,9 @@ import './components/footer';
 
 /* import JS */
 import App from './views/App';
-// import SW_REGISTER from './utils/sw-register';
+import SW_REGISTER from './utils/sw-register';
 // import WEBSOCKET_INITIATOR from './utils/websocket-initiator';
-// import CONFIG from './globals/config';
+import CONFIG from './globals/config';
 
 /* Init App */
 const APP = new App({
