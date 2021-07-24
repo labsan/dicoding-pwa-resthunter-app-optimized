@@ -1,6 +1,6 @@
 {
   "name": "pwa-resthunter-app-optimized",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Web aplikasi tentang informasi restoran terbaik di Indonesia",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,14 @@
     "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.2",
+    "jasmine-ajax": "^4.0.0",
+    "jasmine-core": "^3.8.0",
+    "karma": "^6.3.4",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-firefox-launcher": "^2.1.1",
+    "karma-jasmine": "^4.0.1",
+    "karma-sourcemap-loader": "^0.3.8",
+    "karma-webpack": "^5.0.0",
     "style-loader": "^2.0.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12",
