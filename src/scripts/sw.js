@@ -13,7 +13,7 @@ import {
 
 setCacheNameDetails({
   prefix: 'pwa-resthunter-app',
-  suffix: 'v.1.1.0',
+  suffix: 'v.3.1.0',
   precache: 'precache',
   runtime: 'runtime',
 });
