@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const WebpackPWAManifest = require('webpack-pwa-manifest');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const {InjectManifest} = require('workbox-webpack-plugin');
@@ -52,17 +51,6 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
-    }),
-    new FaviconsWebpackPlugin({
-      logo: 'src/public/favicon.ico',
-      favicons: {
-        appName: 'Restaurant Hunter Lite',
-        appDescription: 'Gratis informasi tentang restoran terbaik di Indoensia untukmu',
-        developerName: 'labsan',
-        developerURL: '',
-        background: '#F8EDE3',
-        theme_color: '#5D5E55',
-      },
     }),
     new WebpackPWAManifest({
       name: 'Restaurant Hunter Lite',
