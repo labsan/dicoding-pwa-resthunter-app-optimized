@@ -7,7 +7,9 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint ./src",
-    "test": "karma start"
+    "test": "karma start",
+    "e2e": "codeceptjs run",
+    "e2e-step": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "labsan <yondeveloper@gmail.com>",
