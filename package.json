@@ -21,8 +21,6 @@
     "css-loader": "^3.6.0",
     "eslint": "^7.31.0",
     "eslint-config-google": "^0.14.0",
-    "favicons": "^6.2.2",
-    "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.2",
     "jasmine-ajax": "^4.0.0",
