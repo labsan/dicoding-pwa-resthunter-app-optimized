@@ -12,7 +12,6 @@
         "sourceType": "module"
     },
     "rules": {
-        "linebreak-style": 0,
         "require-jsdoc": ["error", {
             "require": {
                 "FunctionDeclaration": true,
