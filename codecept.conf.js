@@ -8,11 +8,11 @@ exports.config = {
   tests: 'e2e/**/*.spec.js',
   output: 'e2e/outputs',
   helpers: {
-    Puppeteer: {
-      url: 'http://localhost:9192',
+    Playwright: {
+      url: 'http://localhost:9191',
       show: true,
-      windowSize: '1200x900',
     },
+    browser: 'chromium',
   },
   include: {
     I: './steps_file.js',
@@ -29,7 +29,7 @@ exports.config = {
       enabled: true,
     },
     screenshotOnFail: {
-      enabled: false,
+      enabled: true,
     },
   },
 };
