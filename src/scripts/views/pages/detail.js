@@ -46,7 +46,7 @@ const DETAIL = {
       // init like button
       LIKE_BUTTON_PRESENTER.init({
         data,
-        FAVORITE_RESTAURANT_IDB,
+        favoriteResto: FAVORITE_RESTAURANT_IDB,
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
       });
 
