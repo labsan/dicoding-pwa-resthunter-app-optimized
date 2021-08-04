@@ -12,7 +12,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'specs/**/*.spec.js',
+      'specs/**/*Spec.js',
     ],
 
     // list of files / patterns to exclude

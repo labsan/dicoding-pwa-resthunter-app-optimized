@@ -1,4 +1,4 @@
-import { itActsAsFavoriteRestoModel } from './contract/favorite-resto-contract';
+import { itActsAsFavoriteRestoModel } from './contract/favoriteRestoContract';
 
 let favoriteResto = [];
 

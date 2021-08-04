@@ -6,17 +6,17 @@ import {
 import {INIT_SWAL_SUCCESS, INIT_SWAL_ERROR} from './swal-initiator';
 
 const LIKE_BUTTON_PRESENTER = {
-  async init({likeButtonContainer, favoriteResto, data}) {
+  async init({likeButtonContainer, favoriteResto, resto}) {
     this._likeButtonContainer = likeButtonContainer;
-    this._favoriteResto = favoriteResto,
-    this._data = data.restaurant;
+    this._resto = resto;
+    this._favoriteResto = favoriteResto;
 
     await this._renderButton();
   },
 
   async _renderButton() {
     try {
-      const {id} = this._data;
+      const {id} = this._resto;
 
       // Get data restaurant in IDB
       const data = await this._favoriteResto.getRestaurant(id);
@@ -40,7 +40,7 @@ const LIKE_BUTTON_PRESENTER = {
     const likeButton = document.querySelector('#likeButton');
 
     likeButton.addEventListener('click', async () => {
-      await this._favoriteResto.putRestaurant(this._data);
+      await this._favoriteResto.putRestaurant(this._resto);
 
       INIT_SWAL_SUCCESS('Restoran telah disimpan!');
       this._renderButton();
@@ -53,7 +53,7 @@ const LIKE_BUTTON_PRESENTER = {
     const likeButton = document.querySelector('#likeButton');
 
     likeButton.addEventListener('click', async () => {
-      await this._favoriteResto.delRestaurant(this._data.id);
+      await this._favoriteResto.delRestaurant(this._resto.id);
 
       INIT_SWAL_SUCCESS('Restoran belum disimpan!');
       this._renderButton();
