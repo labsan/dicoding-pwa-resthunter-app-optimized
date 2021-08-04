@@ -52,6 +52,14 @@
     .nav-list-block {
       display: flex;
     }
+
+    /* NEW: Optimasi image hero */
+    .hero {
+      min-height: 500px;
+      background: var(--image-color), url('/images/hero-600.jpg');
+      background-size: cover;
+      background-position: center;
+    }
   
     footer li {
       font-size: 14px;
@@ -83,6 +91,12 @@
     #fav-resto {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* NEW: Optimasi image hero */
+    .hero {
+      background: var(--image-color), url('/images/hero-1200.jpg');
+      background-position: center;
     }
   }
   

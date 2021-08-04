@@ -22,10 +22,24 @@
 
         <!-- Import FontAwesome Icon -->
         <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
-        crossorigin="anonymous"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
+            rel="preload"
+            crossorigin="anonymous"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
         />
+
+        <!-- Import noscript CDN & Google Fonts -->
+        <noscript>
+            <link 
+                rel="stylesheet" 
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
+            />
+            <link 
+                rel="stylesheet" 
+                href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+            />
+        </noscript>
 
         <!-- Import CDN Favorite Icon -->
         <script

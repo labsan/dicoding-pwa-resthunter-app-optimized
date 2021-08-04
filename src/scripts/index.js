@@ -1,5 +1,7 @@
 /* for async await transpile */
 import 'regenerator-runtime';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 /* import CSS */
 import '../styles/root.css';
@@ -23,8 +25,8 @@ import './components/footer';
 /* import JS */
 import App from './views/app';
 import SW_REGISTER from './utils/sw-register';
-import WEBSOCKET_INITIATOR from './utils/websocket-initiator';
-import CONFIG from './globals/config';
+// import WEBSOCKET_INITIATOR from './utils/websocket-initiator';
+// import CONFIG from './globals/config';
 
 /* Init App */
 const APP = new App({
@@ -41,5 +43,5 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   APP.renderPage();
   SW_REGISTER();
-  WEBSOCKET_INITIATOR.init(CONFIG.WEBSOCKET_SERVER);
+  // WEBSOCKET_INITIATOR.init(CONFIG.WEBSOCKET_SERVER);
 });

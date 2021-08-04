@@ -3,8 +3,10 @@ import CONFIG from '../../globals/config';
 const DETAIL_LAYOUT = (resto) => `
   <div class="detail">
     <div class="img-container">
-        <img tabindex="0" class="detail-img" alt="${resto.name}" src="${
-  CONFIG.BASE_IMAGE_URL + resto.pictureId}"/>
+        <img tabindex="0" class="detail-img" 
+          alt="${resto.name}" 
+          src="${CONFIG.BASE_IMAGE_URL_SM + resto.pictureId}"
+        />
     </div>
 
     <ul class="detail-info">
