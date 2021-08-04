@@ -41,7 +41,6 @@ const DETAIL = {
 
       // use the detail data
       console.info(data);
-      // eslint-disable-next-line new-cap
       detailContainer.innerHTML += DETAIL_LAYOUT(data.restaurant);
 
       // init like button

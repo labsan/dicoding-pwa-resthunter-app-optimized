@@ -3,6 +3,7 @@
         "browser": true,
         "es2021": true,
         "node": true,
+        "jasmine": true,
         "codeceptjs/codeceptjs": true
     },
     "extends": [
@@ -25,10 +26,10 @@
             }
         }],
         "max-len": ["error", {
-            "code": 100,
+            "code": 120,
             "tabWidth": 3
         }],
         "new-cap": ["error", { "capIsNew": false }]
     },
-    "plugins": ["codeceptjs"]
+    "plugins": ["jasmine", "codeceptjs"]
 }
