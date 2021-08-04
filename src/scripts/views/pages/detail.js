@@ -2,9 +2,9 @@ import URL_PARSER from '../../routes/url-parser';
 import SPINNER from '../templates/spinner';
 import RestaurantSource from '../../data/restaurant-source';
 import DETAIL_LAYOUT from '../templates/detail-layout';
-import LIKE_BUTTON_INITIATOR from '../../utils/like-button-initiator';
+import LIKE_BUTTON_PRESENTER from '../../utils/like-button-presenter';
 import {INIT_SWAL_ERROR} from '../../utils/swal-initiator';
-
+import FAVORITE_RESTAURANT_IDB from '../../data/favorite-restaurant-idb';
 
 const DETAIL = {
   async render() {
@@ -45,9 +45,10 @@ const DETAIL = {
       detailContainer.innerHTML += DETAIL_LAYOUT(data.restaurant);
 
       // init like button
-      LIKE_BUTTON_INITIATOR.init({
-        likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      LIKE_BUTTON_PRESENTER.init({
         data,
+        FAVORITE_RESTAURANT_IDB,
+        likeButtonContainer: document.querySelector('#likeButtonContainer'),
       });
 
       // change spinner display to main
