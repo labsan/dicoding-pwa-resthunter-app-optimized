@@ -6,9 +6,9 @@ import {
 import {INIT_SWAL_SUCCESS, INIT_SWAL_ERROR} from './swal-initiator';
 
 const LIKE_BUTTON_PRESENTER = {
-  async init({likeButtonContainer, favoriteResto, resto}) {
+  async init({likeButtonContainer, data, favoriteResto}) {
     this._likeButtonContainer = likeButtonContainer;
-    this._resto = resto;
+    this._resto = data.restaurant;
     this._favoriteResto = favoriteResto;
 
     await this._renderButton();

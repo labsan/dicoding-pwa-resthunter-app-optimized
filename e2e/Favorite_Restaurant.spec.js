@@ -6,7 +6,7 @@ Before(({I}) => {
   I.amOnPage('/#/favorite');
 });
 
-const emptyFavoriteRestoText = 'tidak ada restoran yang di-favoritkan';
+const emptyFavoriteRestoText = 'Restoran yang di-favoritkan tidak ada. Klik button favorit pada halaman informasi restoran.';
 
 Scenario('menampilkan halaman favorit restoran yang kosong', ({I}) => {
   I.seeElement('#fav-resto');
