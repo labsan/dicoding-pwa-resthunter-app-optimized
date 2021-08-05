@@ -6,6 +6,7 @@ Before(({I}) => {
   I.amOnPage('/#/favorite');
 });
 
+// Value variabel ini menyesuaikan kalimat pada halaman Favorite saat tidak memiliki data restoran dihalamannya
 const emptyFavoriteRestoText = 'Restoran yang di-favoritkan tidak ada. Klik button favorit pada halaman informasi restoran.';
 
 Scenario('menampilkan halaman favorit restoran yang kosong', ({I}) => {
