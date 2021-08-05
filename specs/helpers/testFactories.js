@@ -6,7 +6,7 @@ const CREATE_LIKE_BUTTON_PRESENTER_RESTO_FACTORIES = async (restaurant) => {
     likeButtonContainer: document.querySelector('#likeButtonContainer'),
     favoriteResto: FAVORITE_RESTAURANT_IDB,
     data: {
-      restaurant,
+      restaurant, // nama JSON data Restaurant API Dicoding 
     },
   });
 };
