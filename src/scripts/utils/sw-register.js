@@ -5,15 +5,15 @@ const SW_REGISTER = async () => {
     const WORKBOX = new Workbox('../sw.js');
 
     WORKBOX.addEventListener('waiting', () => {
-      console.log(
-          `Serviceworker baru terinstall, sehingga tidak dapat berjalan `+
-          `dengan optimal untuk sementara waktu!`,
-      );
+      // console.log(
+      //     `Serviceworker baru terinstall, sehingga tidak dapat berjalan `+
+      //     `dengan optimal untuk sementara waktu!`,
+      // );
     });
 
     WORKBOX.addEventListener('activated', (event) => {
       if (!event.isUpdate) {
-        console.log('Serviceworker aktif untuk pertama kalinya');
+        // console.log('Serviceworker aktif untuk pertama kalinya');
       }
     });
 

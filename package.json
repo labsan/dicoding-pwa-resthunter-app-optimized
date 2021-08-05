@@ -56,6 +56,7 @@
     "regenerator-runtime": "^0.13.9",
     "serviceworker-webpack-plugin": "^1.0.1",
     "sweetalert2": "^11.0.20",
+    "workbox-cacheable-response": "^6.1.5",
     "workbox-core": "^6.1.5",
     "workbox-expiration": "^6.1.5",
     "workbox-precaching": "^6.1.5",
