@@ -31,10 +31,7 @@ const FAVORITE = {
 
       // Jika data resto tidak ada (kosong)
       if (data.length === 0) {
-        favRestoContainer.innerHTML = `
-          Restoran yang di-favoritkan tidak ada. 
-          Klik button favorit pada halaman informasi restoran.
-        `;
+        favRestoContainer.innerHTML = `Tidak ada galeri restoran yang ditampilkan.`;
       }
 
       // Menampilkan seluruh resto di-favoritkan
