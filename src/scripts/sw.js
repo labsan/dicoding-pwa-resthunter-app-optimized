@@ -26,6 +26,14 @@ registerRoute(
     ({request}) => request.mode === 'navigate',
     new NetworkFirst({
       cacheName: 'resthunter-pages-cache',
+      plugins: [
+        new CacheableResponsePlugin({
+          statuses: [0, 200],
+          headers: {
+            'X-Is-Cacheable': 'true',
+          },
+        }),
+      ],
     }),
 );
 
