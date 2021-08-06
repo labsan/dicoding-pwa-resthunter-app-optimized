@@ -24,50 +24,39 @@ Scenario('menampilkan satu galeri restoran yang di-favoritkan', async ({I}) => {
   // Pengguna melihat teks pada elemen #fav-resto
   I.see(emptyFavoriteRestoText, '#fav-resto');
 
-  // START_URL: /
-  // I.amOnPage('/');
+    // URL: /
+    I.amOnPage('/');
+    I.seeElement('.card');
+    const FIRST_RESTO_CARD = locate('.card-content-title').first();
+    // const FIRST_RESTO_CARD_TITLE = await I.grabTextFrom(FIRST_RESTO_CARD);
+    I.click(FIRST_RESTO_CARD);
 
-  // Pengguna memilih galeri restoran pertama
-  // I.seeElement('.card-content-title');
-  // I.click(locate('.card-content-title').first());
+    // URL: /#/:detail
+    I.seeElement('#likeButton');
+    I.click('#likeButton');
+    pause();
 
-  // Pengguna menekan tombol favorit restoran
-  // I.seeElement('#likeButton');
-  // I.click('#likeButton');
 
-  // Pengguna melihat galeri restoran pertama pada halaman Favorite
-  // I.amOnPage('/#/favorite');
-  // I.seeElement('.card');
-
-  // I.seeElement('.card a');
-  const FIRST_RESTO_CARD = locate('.card-content-title').first();
-  const FIRST_RESTO_CARD_TITLE = await I.grabTextFrom(FIRST_RESTO_CARD);
-  I.click(FIRST_RESTO_CARD);
-
-  // URL: /resto/:id
-  I.seeElement('#likeButton');
-  I.click('#likeButton');
-
-  // URL: /#/favorite
-  I.amOnPage('/#/favorite');
-  I.seeElement('.card');
-  const UNLIKE_CARD_TITLE = await I.grabTextFrom('.card-content-title');
-  assert.strictEqual(FIRST_RESTO_CARD_TITLE, UNLIKE_CARD_TITLE);
+    // URL: /#/favorite
+    // I.amOnPage('/#/favorite');
+    // I.seeElement('.card');
+    // const likedRestoTitle = await I.grabTextFrom('.card-content-title');
+    // assert.strictEqual(FIRST_RESTO_CARD_TITLE, likedRestoTitle);
 });
 
 // SKENARIO UJI 3
-Scenario('menampilkan satu galeri restoran yang tidak di-favoritkan', async ({I}) => {
-  I.seeElement('.card');
-  const UNLIKE_CARD_TITLE = await I.grabTextFrom('.card-content-title');
-  I.click(UNLIKE_CARD_TITLE);
+// Scenario('menampilkan satu galeri restoran yang tidak di-favoritkan', async ({I}) => {
+//   I.seeElement('.card a');
+//   const likedRestoTitle = await I.grabTextFrom('.card-content-title');
+//   I.click(likedRestoTitle);
 
   // URL: /resto/:id
-  I.seeElement('#likeButton');
-  I.click('#likeButton');
+  // I.seeElement('#likeButton');
+  // I.click('#likeButton');
 
   // URL: /#/favorite
-  I.amOnPage('/#/favorite');
-  I.seeElement('#fav-resto');
-  I.dontSeeElement('.card');
-  I.dontSeeElement('.card-content-title');
-});
+  // I.amOnPage('/#/favorite');
+  // I.seeElement('#fav-resto');
+  // I.dontSeeElement('.card');
+  // I.dontSeeElement('.card-content-title');
+// });
