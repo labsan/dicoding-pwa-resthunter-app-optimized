@@ -5,7 +5,6 @@ import {setCacheNameDetails} from 'workbox-core';
 import {cleanupOutdatedCaches, precacheAndRoute} from 'workbox-precaching';
 import {registerRoute} from 'workbox-routing';
 import {ExpirationPlugin} from 'workbox-expiration';
-import {CacheableResponsePlugin} from 'workbox-cacheable-response';
 import {
   StaleWhileRevalidate,
   CacheFirst,
@@ -14,7 +13,7 @@ import {
 
 setCacheNameDetails({
   prefix: 'pwa-resthunter-app',
-  suffix: 'v.3.1.2',
+  suffix: 'v.3.1.3',
   precache: 'precache',
   runtime: 'runtime',
 });
@@ -26,14 +25,6 @@ registerRoute(
     ({request}) => request.mode === 'navigate',
     new NetworkFirst({
       cacheName: 'resthunter-pages-cache',
-      plugins: [
-        new CacheableResponsePlugin({
-          statuses: [0, 200],
-          headers: {
-            'X-Is-Cacheable': 'true',
-          },
-        }),
-      ],
     }),
 );
 
@@ -48,12 +39,6 @@ registerRoute(
         new ExpirationPlugin({
           maxEntries: 30,
         }),
-        new CacheableResponsePlugin({
-          statuses: [200, 404],
-          headers: {
-            'X-Is-Cacheable': 'true',
-          },
-        }),
       ],
     }),
 );
@@ -66,12 +51,6 @@ registerRoute(
       plugins: [
         new ExpirationPlugin({
           maxEntries: 30,
-        }),
-        new CacheableResponsePlugin({
-          statuses: [200, 404],
-          headers: {
-            'X-Is-Cacheable': 'true',
-          },
         }),
       ],
     }),
@@ -86,12 +65,6 @@ registerRoute(
         new ExpirationPlugin({
           maxEntries: 30,
           maxAgeSeconds: 60 * 60 * 24 * 365,
-        }),
-        new CacheableResponsePlugin({
-          statuses: [200, 404],
-          headers: {
-            'X-Is-Cacheable': 'true',
-          },
         }),
       ],
     }),
@@ -130,12 +103,6 @@ registerRoute(
         new ExpirationPlugin({
           maxEntries: 100,
           maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-        }),
-        new CacheableResponsePlugin({
-          statuses: [200, 404],
-          headers: {
-            'X-Is-Cacheable': 'true',
-          },
         }),
       ],
     }),
