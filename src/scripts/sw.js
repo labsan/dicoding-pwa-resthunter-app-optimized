@@ -5,7 +5,7 @@ import {setCacheNameDetails} from 'workbox-core';
 import {cleanupOutdatedCaches, precacheAndRoute} from 'workbox-precaching';
 import {registerRoute} from 'workbox-routing';
 import {ExpirationPlugin} from 'workbox-expiration';
-import { CacheableResponsePlugin } from 'workbox-cacheable-response';
+import {CacheableResponsePlugin} from 'workbox-cacheable-response';
 import {
   StaleWhileRevalidate,
   CacheFirst,
@@ -39,87 +39,87 @@ registerRoute(
 
 // Cache the CDN Font Awesome icons
 registerRoute(
-  new RegExp(
-      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css',
-  ),
-  new CacheFirst({
-    cacheName: 'CDN-font-awesome-icons',
-    plugins: [
-      new ExpirationPlugin({
-        maxEntries: 30,
-      }),
-      new CacheableResponsePlugin({
-        statuses: [200, 404],
-        headers: {
-          'X-Is-Cacheable': 'true',
-        },
-      }),
-    ],
-  }),
+    new RegExp(
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css',
+    ),
+    new CacheFirst({
+      cacheName: 'CDN-font-awesome-icons',
+      plugins: [
+        new ExpirationPlugin({
+          maxEntries: 30,
+        }),
+        new CacheableResponsePlugin({
+          statuses: [200, 404],
+          headers: {
+            'X-Is-Cacheable': 'true',
+          },
+        }),
+      ],
+    }),
 );
 
 // Cache the Google Fonts stylesheets with a stale-while-revalidate strategy
 registerRoute(
-  ({url}) => url.origin === 'https://fonts.googleapis.com' || url.origin === 'https://fonts.gstatic.com', 
+    ({url}) => url.origin === 'https://fonts.googleapis.com' || url.origin === 'https://fonts.gstatic.com',
     new StaleWhileRevalidate({
-    cacheName: 'google-fonts-stylesheets',
-    plugins: [
-      new ExpirationPlugin({
-        maxEntries: 30,
-      }),
-      new CacheableResponsePlugin({
-        statuses: [200, 404],
-        headers: {
-          'X-Is-Cacheable': 'true',
-        },
-      }),
-    ],
-  }),
+      cacheName: 'google-fonts-stylesheets',
+      plugins: [
+        new ExpirationPlugin({
+          maxEntries: 30,
+        }),
+        new CacheableResponsePlugin({
+          statuses: [200, 404],
+          headers: {
+            'X-Is-Cacheable': 'true',
+          },
+        }),
+      ],
+    }),
 );
 
 // Cache the underlying font files with a cache-first strategy for 1 year.
 registerRoute(
-  ({url}) => url.origin === 'https://fonts.googleapis.com' || url.origin === 'https://fonts.gstatic.com',
-  new CacheFirst({
-    cacheName: 'google-fonts-webfonts',
-    plugins: [
-      new ExpirationPlugin({
-        maxEntries: 30,
-        maxAgeSeconds: 60 * 60 * 24 * 365,
-      }),
-      new CacheableResponsePlugin({
-        statuses: [200, 404],
-        headers: {
-          'X-Is-Cacheable': 'true',
-        },
-      }),
-    ],
-  })
+    ({url}) => url.origin === 'https://fonts.googleapis.com' || url.origin === 'https://fonts.gstatic.com',
+    new CacheFirst({
+      cacheName: 'google-fonts-webfonts',
+      plugins: [
+        new ExpirationPlugin({
+          maxEntries: 30,
+          maxAgeSeconds: 60 * 60 * 24 * 365,
+        }),
+        new CacheableResponsePlugin({
+          statuses: [200, 404],
+          headers: {
+            'X-Is-Cacheable': 'true',
+          },
+        }),
+      ],
+    }),
 );
 
 // Caching Images
 registerRoute(
-  ({request}) => request.destination === 'image',
-  new CacheFirst({
-    cacheName: 'resthunter-images-cache',
-    plugins: [
-      new ExpirationPlugin({
-        maxEntries: 60,
-        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
-      }),
-    ],
-  }),
+    ({request}) => request.destination === 'image',
+    new CacheFirst({
+      cacheName: 'resthunter-images-cache',
+      plugins: [
+        new ExpirationPlugin({
+          maxEntries: 60,
+          maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+        }),
+      ],
+    }),
 );
 
 // Cache CSS and JS Files
 registerRoute(
-({request}) =>
-  request.destination === 'style' ||
+    ({request}) =>
+      request.destination === 'style' ||
   request.destination === 'script' ||
   request.destination === 'worker', new StaleWhileRevalidate({
-  cacheName: 'resthunter-static-resources',
-}),
-)
+      cacheName: 'resthunter-static-resources',
+    }),
+);
 
 // Cache the API data restaurant by dicoding
 registerRoute(

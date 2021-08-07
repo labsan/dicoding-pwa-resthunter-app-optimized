@@ -3,7 +3,7 @@ const assert = require('assert');
 /*
   Value variabel ini menyesuaikan kalimat yang ditampilkan pada halaman Favorite
   ketika tidak memiliki data restoran dihalamannya
-*/ 
+*/
 const EMPTY_FAV_RESTO_TEXT = 'Tidak ada galeri restoran yang ditampilkan.';
 
 // Variabel element HTML
@@ -19,7 +19,7 @@ const URL_FAVORITE_PAGE = '/#/favorite';
 Feature('Favorite Restaurants');
 
 Before(({I}) => {
-  I.amOnPage(URL_FAVORITE_PAGE); 
+  I.amOnPage(URL_FAVORITE_PAGE);
 });
 
 // SKENARIO UJI 1
@@ -35,7 +35,7 @@ Scenario('menampilkan satu galeri restoran yang di-favoritkan', async ({I}) => {
   // URL: /
   I.amOnPage(URL_ROOT_PAGE);
   I.seeElement(ELM_CARD);
-  
+
   const FIRST_RESTO = locate(ELM_CARD_TITLE).first();
   const FIRST_RESTO_TITLE = await I.grabTextFrom(FIRST_RESTO);
   I.click(FIRST_RESTO);
@@ -69,7 +69,7 @@ Scenario('menampilkan satu galeri restoran yang tidak di-favoritkan', async ({I}
   I.seeElement(ELM_LIKE_BUTTON);
   I.click(ELM_LIKE_BUTTON);
 
-  /* UNFAVORITE RESTO */ 
+  /* UNFAVORITE RESTO */
 
   // URL: /#/favorite
   I.amOnPage(URL_FAVORITE_PAGE);

@@ -1,7 +1,7 @@
 // import  FAVORITE_RESTAURANT_IDB from '../data/favorite-restaurant-idb';
 import {
-  LIKE_BUTTON_TEMPLATE, 
-  UNLIKE_BUTTON_TEMPLATE
+  LIKE_BUTTON_TEMPLATE,
+  UNLIKE_BUTTON_TEMPLATE,
 } from '../views/templates/like-button-layout';
 import {INIT_SWAL_SUCCESS, INIT_SWAL_ERROR} from './swal-initiator';
 

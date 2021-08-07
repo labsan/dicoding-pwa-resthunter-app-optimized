@@ -29,7 +29,6 @@ const FAVORITE_RESTAURANT_IDB = {
     if (!resto.hasOwnProperty('id')) {
       return;
     }
-    
     return (await DB_PROMISE).put(OBJECT_STORE_NAME, resto);
   },
 
